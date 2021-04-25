@@ -29,4 +29,12 @@ module.exports = app => {
         // Sending a json response back to the client
         res.json(storeNotes);
     });
+
+    app.delete("/api/notes/:id", (req, res) => {
+        const deleteNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+    
+        fs.writeFileSync("./db/db.json", JSON.stringify(deleteNotes));
+    
+        res.json(deleteNotes);
+    });
 }
