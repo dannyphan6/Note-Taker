@@ -42,6 +42,7 @@ module.exports = app => {
 
         deleteNotes = filterNotes;
     
+        // Update the array with the selected note removed
         fs.writeFileSync("./db/db.json", JSON.stringify(filterNotes));
     
         res.end();
