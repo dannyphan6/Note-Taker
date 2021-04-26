@@ -12,7 +12,7 @@
 ## Project Description
 Note Taker is an application that allows the user to create, save, and delete notes. This helps keep track of tasks that need to be completed, along with staying organized. This application connects the front end to the back end by utilizing Express. When the user starts filling out the text fields, a save button is shown on the top right hand corner, which will allow you to save the note. Once that's done, the note will render on the left. A trash bin button is also generated, that allows the note to be deleted if needed. Take control of your life and ensure your tasks are completed in a timely manner!  
 
-Below is an example of the generated HTML webpage:
+Below is an example of the web application's appearance and functionality:
 
 ![Note-Taker](./public/assets/images/Capture.PNG)
 
