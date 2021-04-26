@@ -31,10 +31,19 @@ module.exports = app => {
     });
 
     app.delete("/api/notes/:id", (req, res) => {
-        const deleteNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+        let deleteNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+
+        // When route is ran, front end will give the parameter an id 
+        const noteId = req.params.id;
+
+        // Filters through the array of deleteNotes and tries to match the front end note to the unique id assigned on line 22
+        // IF it does match, then remove it from the array
+        let filterNotes = deleteNotes.filter((note) => noteId !== note.id)
+
+        deleteNotes = filterNotes;
     
-        fs.writeFileSync("./db/db.json", JSON.stringify(deleteNotes));
+        fs.writeFileSync("./db/db.json", JSON.stringify(filterNotes));
     
-        res.json(deleteNotes);
+        res.end();
     });
 }
