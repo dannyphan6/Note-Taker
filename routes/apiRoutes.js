@@ -8,7 +8,7 @@ module.exports = app => {
     app.get("/api/notes/:id", (req, res) => {
         const saveNotes = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
     
-        // 
+        // Takes the response and returns a valid JSON object back to the client
         res.json(saveNotes[Number(req.params.id)]);
     });
     
@@ -38,7 +38,7 @@ module.exports = app => {
 
         // Filters through the array of deleteNotes and tries to match the front end note to the unique id assigned on line 22
         // IF it does match, then remove it from the array
-        let filterNotes = deleteNotes.filter((note) => noteId !== note.id)
+        let filterNotes = deleteNotes.filter((note) => noteId !== note.id);
 
         deleteNotes = filterNotes;
     
@@ -47,4 +47,4 @@ module.exports = app => {
     
         res.end();
     });
-}
+};
