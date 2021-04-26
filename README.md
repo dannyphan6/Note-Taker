@@ -23,6 +23,11 @@ Below is an example of how the application works and the results:
 
 https://drive.google.com/file/d/1o6AATUEGrZIHyLLl0WcBq7jT54rYoHMj/view
 
+## Deployed Link:
+Please feel free to visit the live web application. Link is below.
+
+[Note Taker](https://evening-stream-57359.herokuapp.com/)
+
 ## Usage
 To execute this application, you will open the directory where server.js resides. Once you're in the correct directory, then run the command "node server.js" in the terminal. This will connect you to the server. If at any point, you'd like to end the connection to the server, run the command "CTRL + C" Next, navigate to "localhost:5000" in your preferred browser. You're now taken to the home page where you may begin to create, save, and delete notes. 
 
